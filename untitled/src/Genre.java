@@ -1,0 +1,4 @@
+public enum Genre
+{
+   ROMAN,DRAMA,FANTASY,MISTERY,SIENCE,FAIRYTALE
+}
