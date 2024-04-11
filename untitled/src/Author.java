@@ -1,7 +1,9 @@
 import java.util.Objects;
 
 public class Author
-{
+{  private String name;
+   private String lastName;
+   private String nationalCode;
    @Override
    public String toString()
    {
@@ -33,28 +35,32 @@ public class Author
       return Objects.hash(name, lastName, nationalCode);
    }
 
-   public Author(String name, String lastName, int nationalCode)
+   public Author()
    {
-      this.name = name;
-      this.lastName = lastName;
-      this.nationalCode = String.valueOf(nationalCode);
-   }
 
+   }
+   public Author(String firstName, String lastName, int nationalCode) {
+      this.name = firstName;
+      this.lastName = lastName;
+      this.nationalCode= String.valueOf(nationalCode);}
    public String getName()
    {
       return name;
    }
 
-   public void setName(String name)
+   public void setName(String name , String lastName)
    {
-      this.name = name;
+      this.lastName=lastName;
+   this.name = name;
    }
 
    public String getLastName()
    {
       return lastName;
    }
-
+public String getFullName(){
+      return name + "" + lastName;
+}
    public void setLastName(String lastName)
    {
       this.lastName = lastName;
@@ -70,8 +76,6 @@ public class Author
       this.nationalCode = String.valueOf(nationalCode);
    }
 
-   private String name;
-   private String lastName;
-   private String nationalCode;
+
 
 }
